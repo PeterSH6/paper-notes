@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@PeterSH6 
-vycezhong
-/
-read-papers
-2
-14
-0
-Code
-Issues
-87
-Pull requests
-Actions
-Security
-Insights
-read-papers/stat.py /
-@vycezhong
-vycezhong update stat.py
-Latest commit e37cb4c on 1 Jun
- History
- 1 contributor
-46 lines (42 sloc)  1.47 KB
-  
 import datetime
 import json
 import sys
@@ -41,7 +12,7 @@ closed_time = []
 page = 1
 while True:
     try:
-        response = requests.get("https://api.github.com/repos/vycezhong/read-papers/issues",
+        response = requests.get("https://api.github.com/repos/petersh6/paper-notes/issues",
                                 params={"state": "closed",
                                         "per_page": "100", "page": page},
                                 headers={"Accept": "application/vnd.github.v3+json"})
@@ -73,16 +44,3 @@ ax.set_ylabel("# Papers")
 ax.set_title("Statistics of Reading Papers (up to %s)" %
              datetime.datetime.today().strftime('%Y-%m-%d'))
 plt.savefig("stat.png")
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
